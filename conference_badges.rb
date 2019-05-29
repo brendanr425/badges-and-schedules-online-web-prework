@@ -11,20 +11,20 @@ def batch_badge_creator(arr)
   badge_messages
 end
 
-def assign_rooms(list)
-  new_list = []
-  list.each_with_index do |ele, idx|
-    new_list << "Hello, #{ele}! You'll be assigned to room #{idx + 1}!"
+def assign_rooms(arr)
+  new_arr = []
+  arr.each_with_index do |ele, idx|
+    new_arr << "Hello, #{ele}! You'll be assigned to room #{idx + 1}!"
   end
-  new_list
+  new_arr
 end
 
-def printer(x)
-  batch_badge_creator.each do |message|
+def printer(arr)
+  batch_badge_creator(arr).each do |message|
     puts message
   end
 
-  assign_rooms.each do |message2|
-    puts message2
+  assign_rooms(arr).each do |message|
+    puts message
   end
 end
